@@ -1,23 +1,30 @@
 
-const dropdownContent = document.getElementById('dropdownContent');
-const dropBtn = document.getElementById('dropbtn');
-dropBtn.addEventListener('click', dropDownContent());
- function dropDownContent()  {
-    dropdownContent.classList.remove('close');
-    dropdownContent.classList.add('open');
- }
+ const checkLevelBtn = document.getElementById('checkLevel');
+ const checkAnswersBtn = document.getElementById('checkAnswers');
+ const politePhrases = document.getElementById('polite');
+ const impolitePhrases = document.getElementById('impolite');
 
 
 
- const API_KEY = "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";
- const submitButton = document.querySelector('#submit');
 
- async function getMessage()  {
-    console.log('clicked');
-     try {
-        await fetch('https://api.openai.com/v1/chat/completions')
-     } catch {
-     }
- }
+ const testBtn = document.getElementById('testBtn');
+ 
 
- submitButton.addEventListener('click', getMessage )
+
+
+
+ checkAnswersBtn.addEventListener('click', openPolitePhrases);
+ function openPolitePhrases() {
+   impolitePhrases.classList.remove('open');
+   impolitePhrases.ClassList.add('closed');
+   politePhrases.classList.remove('closed');
+   politePhrases.ClassList.add('open');
+ };
+ 
+
+
+
+
+
+
+
