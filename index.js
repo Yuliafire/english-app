@@ -11,7 +11,12 @@
  
 
 
-
+ .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
 
  checkAnswersBtn.addEventListener('click', openPolitePhrases);
  function openPolitePhrases() {
@@ -20,7 +25,20 @@
    politePhrases.classList.remove('closed');
    politePhrases.ClassList.add('open');
  };
- 
+
+
+ ///tabs
+
+ const tab = document.querySelectorAll('[data-tag-target]');
+
+  tab.addEventListener('click', () => {
+       const target  = document.querySelector(tab.dataset.tabTarget);
+       target.classList.add('active');
+  })
+
+
+
+
 
 
 

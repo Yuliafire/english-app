@@ -261,6 +261,101 @@
   /* position: relative; */
 }
 
+.tabs {
+  display: flex;
+  position: relative;
+  margin-top: -300px;
+  /* margin: 3rem 0; */
+  width: 300px;
+  background: rgb(255, 0, 255);
+  /* height: 14.75rem; */
+}
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: table;
+}
+.tabs::after {
+  clear: both;
+}
+.tab {
+  float: left;
+}
+.tab-switch {
+  display: none;
+}
+.tab-label {
+  position: relative;
+  display: block;
+  line-height: 2.75em;
+  height: 3em;
+  padding: 0 1em;
+  background:white;
+  border-right: 0.125rem solid  rgb(255, 0, 255);
+  color: black;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+}
+.tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+}
+.tab-content {
+  /* height: 12rem; */
+  height: fit-content;
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 1.618rem;
+  background: rgb(255, 0, 255);
+  color: white;
+  font-weight: bold;
+  border-bottom: 0.25rem solid #bdc3c7;
+  opacity: 0;
+  transition: all 0.35s;
+}
+.tab-switch:checked + .tab-label {
+  background: rgb(255, 0, 255);
+  color: #2c3e50;
+  border-bottom: 0;
+  border-right: 0.125rem solid #fff;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+.tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .welcome__container-intro {
  
   color: #fff;
@@ -271,20 +366,20 @@
   background-color:rgb(255, 0, 255);
   border-radius: 5px;
   border:rgb(255, 0, 255) 1px solid;
-}
+} 
 
-.welcome__container-title {
+ .welcome__container-title {
   font-size: 32px;
   font-weight: bold;
-}
+} 
 
 .welcome__container-title-text{
     font-size: 20px;
     font-weight: bold;
-}
+} 
 
 
-.button-check
+ .readbtn
 {
   width: 130px;
   padding-top: 10px;
@@ -294,16 +389,38 @@
   border: 1px solid blue;
   color: white;
   border-radius: 5px;
-}
+} 
+
+
+/* [data-tab-content]  {
+  display: none;
+} */
+
+/* .active[data-tab-content] {
+  display: flex;
+} */
+
+/* .tab {
+  overflow: hidden;
+  /* border: 1px solid #ccc;
+  background-color: #f1f1f1; */
+/* }
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+} */ */
 
 
 .welcome__video  {
    padding-top: 20px;
 }
 
-hr {
+/* hr {
   background: white;
-}
+} */
 
 
 
@@ -469,6 +586,10 @@ hr {
     width: 100%;
   }
 
+  .modal-verbs__container {
+    margin: 0 auto;
+  }
+
   .like-phrases,
   .modal-verbs,
   .idioms
@@ -481,6 +602,9 @@ hr {
   .wrapper__list {
      color: #000;
      list-style-type: none;
+     border: 3px solid white;
+     padding: 30px;
+     
   }
 
   .wrapper__list span {
