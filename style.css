@@ -286,7 +286,7 @@
 
 .button-check
 {
-  width: 200px;
+  width: 130px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: bold;
@@ -361,13 +361,6 @@ hr {
     justify-content: space-around;
   }
 
-
-  #polite {
-    display: none;
-  }
-
-
-
   .polite-english .second-background
     {
     /* position: absolute; */
@@ -382,8 +375,13 @@ hr {
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
+    font-weight: bold;
   }
    
+
+ .polite-english__item p {
+ font-size: 28px;
+ }
   .check-polite-btn 
   {
    font-size: 18px;
@@ -394,6 +392,9 @@ hr {
    border: 1px solid blue;
    margin-top: 10px;
    font-weight: bold;
+   margin-top: 30px;
+   margin-bottom: 25px;
+   text-transform:uppercase;
   }
 
   .check-polite-btn:hover {
@@ -405,12 +406,29 @@ hr {
     background-color: white;
   }
 
-  .open {
+
+  /* #polite {
+    display: none;
+  } */
+
+  /* .open {
   display: flex;
+  } */
+
+  .second-background.polite.close {
+    display: none;
   }
 
-  .closed {
+  .second-background.polite.open {
+    display: flex;
+  }
+
+  /* .second-background.impolite.close {
     display: none;
+  } */
+
+  .second-background.impolite.open {
+    display: flex;
   }
 
 
@@ -484,6 +502,8 @@ hr {
     color: plum;
     font-size: 32px;
     color: #fff;
+    padding-top: 40px;
+    padding-bottom: 50px;
   }
 
   .video-container {
@@ -504,10 +524,6 @@ hr {
     background-color: #0000FF;
 
   }
-
-
-
-
 
   .linking-words {
     position: relative;
