@@ -19,12 +19,31 @@
     }
 
     homeBtn.addEventListener('click', openWelcome);
+
+
+/*
     function openWelcome() {
-      welcomeIntro.classList.add('open');
+      if (welcomeIntroSecond.classList.contains('open'))
+       {
+        welcomeIntroSecond.classList.remove('open');
+        welcomeIntroSecond.classList.add('close');
+      }
+     welcomeIntro.classList.add('open');
       welcomeIntro.classList.remove('close');
-      welcomeIntroSecond.classList.add('close');
-      welcomeIntroSecond.classList.remove('open');
     }
+    */
+
+
+function openRegisterForm() {
+	if (loginForm.classList.contains("open")) {
+		loginForm.classList.remove("open");
+		loginForm.classList.add("close");
+	}
+	registerForm.classList.add("open");
+	registerForm.classList.remove("close");
+}
+
+
 
 
     const checkAnswersBtn = document.getElementById('checkAnswersBtn');
