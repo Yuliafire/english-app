@@ -1,63 +1,97 @@
 
-//  const checkLevelBtn = document.getElementById('checkLevel');
-//  const checkAnswersBtn = document.getElementById('checkAnswers');
-//  const politePhrases = document.getElementById('polite');
-//  const impolitePhrases = document.getElementById('impolite');
+// var button = document.getElementById('hamburger-menu'),
+//     span = button.getElementsByTagName('span')[0];
+
+// button.onclick =  function() {
+//   span.classList.toggle('hamburger-menu-button-close');
+// };
+
+// $('#hamburger-menu').on('click', toggleOnClass);
+
+// function toggleOnClass(event) {
+//   var toggleElementId = '#' + $(this).data('toggle'),
+//   element = $(toggleElementId);
+
+//   element.toggleClass('on');
+
+// }
+
+// // close hamburger menu after click a
+// $( '.menu li a' ).on("click", function(){
+//   $('#hamburger-menu').click();
+// });
 
 
- const welcomeIntro = document.getElementById('welcomeIntro');
- const readBtn = document.getElementById('readBtn');
- const welcomeIntroSecond = document.getElementById('welcomeIntroSecond');
- const homeBtn = document.getElementById('homeBtn');
 
- readBtn.addEventListener('click', openWelcomeSecond);
-    function openWelcomeSecond() {
-        welcomeIntro.classList.add('close');
-        welcomeIntro.classList.remove('open');
-        welcomeIntroSecond.classList.remove('close');
-        welcomeIntroSecond.classList.add('open');
-    }
+// Select menu and button
+const menu = document.getElementById('menu');
+const hamburgerBtn = document.getElementById('hamburger-menu');
 
-    homeBtn.addEventListener('click', openWelcome);
+// Add click handler to button
+hamburgerBtn.addEventListener('click', () => {
+
+  // Toggle "open" class on menu
+  menu.classList.toggle('open');
+
+});
 
 
-/*
-    function openWelcome() {
-      if (welcomeIntroSecond.classList.contains('open'))
-       {
-        welcomeIntroSecond.classList.remove('open');
-        welcomeIntroSecond.classList.add('close');
-      }
-     welcomeIntro.classList.add('open');
-      welcomeIntro.classList.remove('close');
-    }
-    */
 
 
-function openRegisterForm() {
-	if (loginForm.classList.contains("open")) {
-		loginForm.classList.remove("open");
-		loginForm.classList.add("close");
-	}
-	registerForm.classList.add("open");
-	registerForm.classList.remove("close");
+
+
+// /* WELCOME  START */
+const welcomeIntro = document.getElementById('welcomeIntro');
+welcomeIntro.style.display = 'flex';
+
+const welcomeIntroSecond =  document.getElementById('welcomeIntroSecond');
+welcomeIntroSecond.style.display = 'none';
+const readBtn = document.getElementById('readBtn');
+const homeBtn = document.getElementById('homeBtn');
+
+readBtn.addEventListener('click', () => {
+  welcomeIntroSecond.style.display = welcomeIntroSecond.style.display === 'none' ? 'flex' : 'none';
+  welcomeIntro.style.display =  welcomeIntro.style.display === 'none' ? 'flex' : 'none';
+});
+
+
+homeBtn.addEventListener('click', () => {
+  welcomeIntro.style.display = welcomeIntro.style.display === 'none' ? 'flex' : 'none';
+  welcomeIntroSecond.style.display = welcomeIntroSecond.style.display === 'none' ? 'flex' : 'none';
+ });
+/* WELCOME END */
+
+
+//Set initial visibility
+const impoliteDiv = document.getElementById('impolite');
+impoliteDiv.style.display = 'flex';
+const politeDiv = document.getElementById('polite');
+politeDiv.style.display = 'none';
+const checkBtn = document.getElementById('checkAnswersBtn');
+
+checkBtn.addEventListener('click', () => {
+if(politeDiv.style.display === 'none') {
+  politeDiv.style.display = 'flex';
+  impoliteDiv.style.display = 'none';
+} else {
+  politeDiv.style.display = 'none';  
+  impoliteDiv.style.display = 'flex';
 }
+});
 
 
+const crossBtnPolite = document.querySelector('#crossBtnPolite');
+crossBtnPolite.addEventListener('click', () => {
+  politeDiv.style.display = 'none';  
+});
 
 
-    const checkAnswersBtn = document.getElementById('checkAnswersBtn');
-    const polite = document.getElementById('polite');
-    const impolite = document.getElementById('impolite');
+const crossBtnImpolite = document.querySelector('#crossBtnImpolite');
 
-    checkAnswersBtn.addEventListener('click', openPoliteAnswers);
-    function openPoliteAnswers() {
-      impolite.classList.add('close');
-      impolite.classList.remove('open');
-      polite.classList.add('open');
-      polite.classList.remove('close');
+crossBtnImpolite.addEventListener('click', () => {
+  impoliteDiv.style.display = 'none';
+});
 
-    }
 
 
 
