@@ -24,16 +24,59 @@
 
 
 // Select menu and button
-const menu = document.getElementById('menu');
-const hamburgerBtn = document.getElementById('hamburger-menu');
+// const menu = document.getElementById('menu');
+// const hamburgerBtn = document.getElementById('hamburger-menu');
 
-// Add click handler to button
-hamburgerBtn.addEventListener('click', () => {
+// // Add click handler to button
+// hamburgerBtn.addEventListener('click', () => {
 
-  // Toggle "open" class on menu
-  menu.classList.toggle('open');
+//   // Toggle "open" class on menu
+//   menu.classList.toggle('open');
 
-});
+// });
+
+
+
+let menu_icon_box = document.getElementById("menuIconBox");
+let box = document.querySelector(".box");
+
+
+menu_icon_box.onclick = function(){
+      menu_icon_box.classList.toggle(".active");
+      box.classList.toggle(".active_box");
+      }
+
+// document.onclick = function(e){
+//             if (!menu_icon_box.contains(e.target) && !box.contains(e.target) ) {
+//                 menu_icon_box.classList.remove("active");
+//                 box.classList.remove("active_box");
+//             }
+//         }
+
+
+        document.onclick = function(e) {
+          if(!menu_icon_box.contains(e.target)) {
+            menu_icon_box.classList.remove('active');
+            box.classList.remove('active_box'); 
+          }
+        }
+        
+
+      
+          menu_icon_box.addEventListener('click', () => {
+            menu_icon_box.classList.toggle('active');
+            box.classList.toggle('active_box');
+          });
+          
+          document.addEventListener('click', (e) => {
+            if(!menu_icon_box.contains(e.target)) {
+              menu_icon_box.classList.remove('active');
+              box.classList.remove('active_box');
+            }
+          })
+      
+    
+        
 
 
 
@@ -54,7 +97,6 @@ readBtn.addEventListener('click', () => {
   welcomeIntro.style.display =  welcomeIntro.style.display === 'none' ? 'flex' : 'none';
 });
 
-
 homeBtn.addEventListener('click', () => {
   welcomeIntro.style.display = welcomeIntro.style.display === 'none' ? 'flex' : 'none';
   welcomeIntroSecond.style.display = welcomeIntroSecond.style.display === 'none' ? 'flex' : 'none';
@@ -74,7 +116,7 @@ if(politeDiv.style.display === 'none') {
   politeDiv.style.display = 'flex';
   impoliteDiv.style.display = 'none';
 } else {
-  politeDiv.style.display = 'none';  
+  politeDiv.style.display = 'none';
   impoliteDiv.style.display = 'flex';
 }
 });
@@ -82,7 +124,7 @@ if(politeDiv.style.display === 'none') {
 
 const crossBtnPolite = document.querySelector('#crossBtnPolite');
 crossBtnPolite.addEventListener('click', () => {
-  politeDiv.style.display = 'none';  
+  politeDiv.style.display = 'none';
 });
 
 
@@ -91,6 +133,10 @@ const crossBtnImpolite = document.querySelector('#crossBtnImpolite');
 crossBtnImpolite.addEventListener('click', () => {
   impoliteDiv.style.display = 'none';
 });
+
+
+
+
 
 
 

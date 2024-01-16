@@ -15,21 +15,27 @@
 <body>
     <header class="header">
       <div class="header__container">
-        <button id="hamburger-menu" data-toggle="ham-navigation" class="hamburger-menu-button"><span class="hamburger-menu-button-open">Menu</span></button>
-        <nav role="navigation">
-          <div id="menuToggle">
-            <ul id="menu">
-                <li class="menu__item"><a href="#welcome">About</a></li>
-                <li class="menu__item"><a href="#politeEnglish">Polite English</a></li>
-                <li class="menu__item"><a href="#likePhrases">Like Phrases</a></li>
-                <li class="menu__item"><a href="#getPhrases">Get Phrases</a></li>
-                <li class="menu__item"><a href="#modalVerbs">Modal Verbs</a></li>
-                <li class="menu__item"><a href="#linkingWords">Linking Words</a></li>
-                <li class="menu__item"><a href="#idioms">Idioms</a></li>
-                <li class="menu__item"><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
+        <div class="menu_icon_box" id="menuIconBox">
+            <div class="line1 active"></div>
+            <div class="line2 active"></div>
+            <div class="line3 active"></div>
+        </div>
+
+        <div class="box">
+          <nav>
+            <ul>
+              <li class="menu__item"><a href="#welcome">About</a></li>
+              <li class="menu__item"><a href="#politeEnglish">Polite English</a></li>
+              <li class="menu__item"><a href="#likePhrases">Like Phrases</a></li>
+              <li class="menu__item"><a href="#getPhrases">Get Phrases</a></li>
+              <li class="menu__item"><a href="#modalVerbs">Modal Verbs</a></li>
+              <li class="menu__item"><a href="#linkingWords">Linking Words</a></li>
+              <li class="menu__item"><a href="#idioms">Idioms</a></li>
+              <li class="menu__item"><a href="#contact">Contact</a></li>
+           </ul>
+          </nav>
+        </div>
+
 
         <h1 class="header__logo">
           <img src="./assets/icons/americanlogo.png" width="250px"/>
@@ -38,23 +44,6 @@
       </div>
     </header>
 
-
-         <!-- <input type="checkbox"/>
-            <span></span>
-            <span></span>
-            <span></span> -->
-
-<!-- <button id="hamburger-menu" data-toggle="ham-navigation" class="hamburger-menu-button"><span class="hamburger-menu-button-open">Menu</span></button> -->
-<!-- <nav id="ham-navigation" class="ham-menu">
-  <ul class="menu">
-    <li><a href="#">Home</a></li>
-    <li class="active"><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Features</a></li>
-    <li><a href="#">Products</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>-->
 
 
     <main>
@@ -83,7 +72,9 @@
             <button class="homebtn" id="homeBtn">HOME</button>
           </div>
 
-         <a href="https://t.me/English_IT_group"><button class="btn-telegram">Join Us</button></a> 
+         <a href="https://t.me/English_IT_group"><button class="btn-telegram">  
+         
+     Join Us</button></a> 
         </div>
 
             <video class="welcome__video" src="./assets/videos/welcome.mp4" controls width="400px" height="620px"></video>
@@ -475,7 +466,7 @@
 </section>
 
 <section class="idioms" id="idioms">
-  <div class="idioms__container">
+  <div class="idioms__container container">
     <h2 class="section-title">Idioms</h2>
     <div class="video-container">
         <div class="vidBx">
@@ -527,7 +518,7 @@
               <tr>
                 <td> Call it a day</td>
                 <td>Stop working on something</td>
-                <td>Mexico</td>
+                <td>Когда что-то завершаем (урок, переговоры, оабочий день)</td>
               </tr>
               <tr>
                 <td>Beat around the bush</td>
@@ -537,17 +528,17 @@
               <tr>
                 <td>Actions speak louder than words</td>
                 <td>Believe what people do and not what they say</td>
-                <td>Mexico</td>
+                <td>Действия говорят больше, чем слова</td>
               </tr>
               <var><tr>
                 <td>Barking up the wrong tree</td>
                 <td>To be mistaken, to be looking for solutions in the wrong place</td>
-                <td>Mexico</td>
+                <td>Наговорить на кого-то, винить не по делу</td>
               </tr>
               <tr>
                 <td>Bite off more than you can chew</td>
                 <td>Take on a project that you cannot finish</td>
-                <td>Mexico</td>
+                <td>Начать слишком много разных проектов, с которыми не можешь справиться</td>
               </tr></var>
               </table>
              <button class="test" id="testBtn" type="button">Test</button>
